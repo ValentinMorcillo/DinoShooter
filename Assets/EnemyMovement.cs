@@ -8,15 +8,24 @@ public class EnemyMovement : MonoBehaviour
     public string weakness = "Bullet";
     public string follow = "Player";
     private Transform target;
+    private GameObject player;
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag(follow).transform;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
+    // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        Swarm();
+    }
+
+
+
+    private void Swarm()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
