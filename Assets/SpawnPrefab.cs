@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnPrefab : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class SpawnPrefab : MonoBehaviour
     public int reloadTime = 1;
     private int reloadCount = 0;
     private SpriteRenderer spriteRenderer;
-
+    public Text balas;
         void Start()
     {
         mainCamera = Camera.main;
@@ -27,7 +28,7 @@ public class SpawnPrefab : MonoBehaviour
         float angle = Mathf.Atan2(cursorDirection.y, cursorDirection.x) * Mathf.Rad2Deg;
         angle += angleOffset; // Apply the angle offset
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
+        balas.text = "Balas: " + magazine;
         //Spawn Bullet when firing
         if (Input.GetMouseButtonDown(0) && magazine > 0)
         {

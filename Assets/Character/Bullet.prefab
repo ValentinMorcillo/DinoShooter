@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 30
+  puntosUI: {fileID: 7267960385635884166, guid: 49f2160150d0f194dac9923c4e7dd878, type: 3}
+  puntos: 0
 --- !u!50 &2130711982476245822
 Rigidbody2D:
   serializedVersion: 4
