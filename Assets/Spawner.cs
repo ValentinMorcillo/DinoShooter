@@ -7,7 +7,8 @@ public class Spawner : MonoBehaviour
     public GameObject prefabToSpawn;
     public float spawnInterval = 1.0f;
     public Vector3 spawnAreaSize = new Vector3(10, 0, 10);
-
+    public float spawnIcreaseRate = 2.0f;
+    public float spawnIntervalMin = 0.5f;
     private float timeSinceLastSpawn = 0.0f;
 
     void Update()
@@ -17,6 +18,15 @@ public class Spawner : MonoBehaviour
         {
             SpawnPrefab();
             timeSinceLastSpawn = 0.0f;
+            if (spawnInterval - spawnIcreaseRate > spawnIntervalMin)
+            {
+                spawnInterval -= spawnIcreaseRate;
+            }
+            else
+            {
+                spawnInterval = spawnIntervalMin;
+            }
+
         }
     }
 

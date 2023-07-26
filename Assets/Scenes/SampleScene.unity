@@ -239,6 +239,8 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 5055364562414181459, guid: c3240c7375a0a8a4586568180d67d98e, type: 3}
   spawnInterval: 1
   spawnAreaSize: {x: 10, y: 7, z: 0}
+  spawnIcreaseRate: 0.0075
+  spawnIntervalMin: 0.25
 --- !u!4 &554925898
 Transform:
   m_ObjectHideFlags: 0

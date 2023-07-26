@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float minSpeed = 4.0f;
+    public float maxSpeed = 10.0f;
     public string weakness = "Bullet";
     public string follow = "Player";
     private Transform target;
     private GameObject player;
+    private float speed = 5.0f;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        speed = Random.Range(minSpeed, maxSpeed);
     }
 
     // Update is called once per frame
