@@ -14,7 +14,10 @@ public class SpawnPrefab : MonoBehaviour
     private int reloadCount = 0;
     private SpriteRenderer spriteRenderer;
     public Text balas;
-        void Start()
+    public AudioSource source;
+    public AudioClip clip;
+
+    void Start()
     {
         mainCamera = Camera.main;
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -41,6 +44,7 @@ public class SpawnPrefab : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, childPosition, Quaternion.AngleAxis(angle-=angleOffset, Vector3.forward));
 
             magazine -= 1;
+            source.PlayOneShot(clip);
         }
 
         //Reload Magazine

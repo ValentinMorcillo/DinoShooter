@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class EnemyMovement : MonoBehaviour
     private Transform target;
     private GameObject player;
     private float speed = 5.0f;
+    
+
 
     void Start()
     {
@@ -19,11 +22,12 @@ public class EnemyMovement : MonoBehaviour
     }
 
     // Update is called once per frame
+
     void Update()
     {
         Swarm();
+       
     }
-
 
 
     private void Swarm()
@@ -36,6 +40,9 @@ public class EnemyMovement : MonoBehaviour
         if (collision.gameObject.CompareTag(weakness))
         {
             Destroy(gameObject);
+            
         }
     }
+
+    
 }

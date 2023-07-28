@@ -58,12 +58,13 @@
   <ItemGroup>
     <Compile Include="Assets\EnemyMovement.cs" />
     <Compile Include="Assets\SpawnPrefab.cs" />
+    <Compile Include="Assets\ScrollingBackground.cs" />
     <Compile Include="Assets\LookAtCursor.cs" />
+    <Compile Include="Assets\Character.cs" />
     <Compile Include="Assets\OutOfBoundsDestroyer.cs" />
+    <Compile Include="Assets\ReloadTut.cs" />
     <Compile Include="Assets\BulletMovement.cs" />
     <Compile Include="Assets\Spawner.cs" />
-    <Compile Include="Assets\ScrollingBackground.cs" />
-    <Compile Include="Assets\Character.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
