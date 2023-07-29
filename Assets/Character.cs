@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Character : MonoBehaviour
 {
     public float vida = 100;
-    public float puntos = 0;
     public Text vidaUI;
+    public Button button;
   
 
 
@@ -26,6 +26,7 @@ public class Character : MonoBehaviour
         if (vida <= 0)
         {
             Destroy(this.gameObject);
+            button.gameObject.SetActive(true);
         }
 
         vidaUI.text = "Vida: " + vida;

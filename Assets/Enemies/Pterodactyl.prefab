@@ -52,8 +52,6 @@ MonoBehaviour:
   maxSpeed: 10
   weakness: Bullet
   follow: Player
-  source: {fileID: -1905186736628532866}
-  clip: {fileID: 8300000, guid: 68afb951ed6b5e848a8319e893f0437d, type: 3}
 --- !u!61 &8290974876578299804
 BoxCollider2D:
   m_ObjectHideFlags: 0
