@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     public float vida = 100;
     public Text vidaUI;
     public Button button;
+    public Button button2;
   
 
 
@@ -27,6 +28,7 @@ public class Character : MonoBehaviour
         {
             Destroy(this.gameObject);
             button.gameObject.SetActive(true);
+            button2.gameObject.SetActive(true);
         }
 
         vidaUI.text = "Vida: " + vida;
